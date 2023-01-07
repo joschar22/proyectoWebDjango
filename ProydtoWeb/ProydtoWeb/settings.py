@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #  apps propios
     'ProyectoWebApp',
     'servicios',
+    'blog',
 ]
 
 MIDDLEWARE = [
