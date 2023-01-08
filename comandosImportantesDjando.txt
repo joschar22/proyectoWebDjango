@@ -1,0 +1,3 @@
+python manage.py starapp nombre_app		-> crea una app
+python manage.py makemigrations blog	-> hacemigraciones de blog 
+python manage.py migrate blog    		->hace efecto la migracion
