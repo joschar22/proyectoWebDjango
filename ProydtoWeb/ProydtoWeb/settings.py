@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'servicios',
     'blog',
     'contacto',
+    'tienda',
 ]
 
 MIDDLEWARE = [
@@ -81,17 +82,8 @@ WSGI_APPLICATION = 'ProydtoWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-       """ 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'gestionpedidos',
-        'USER':'postgres',
-        'PASSWORD':'162140',
-        'HOST':'localhost',
-        'DATABASE_PORT':'5432',
-        """
-        'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
     }
 }
 
