@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ProyectoWebApp',
     'servicios',
     'blog',
+    'contacto',
 ]
 
 MIDDLEWARE = [
@@ -80,8 +81,17 @@ WSGI_APPLICATION = 'ProydtoWeb.wsgi.application'
 
 DATABASES = {
     'default': {
+       """ 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'gestionpedidos',
+        'USER':'postgres',
+        'PASSWORD':'162140',
+        'HOST':'localhost',
+        'DATABASE_PORT':'5432',
+        """
+        'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
     }
 }
 
@@ -127,3 +137,12 @@ STATIC_URL = '/static/'
 #configuracion para archivos multimedia
 MEDIA_URL='/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+
+#CONFIGURACION  EMAIL
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER="Ingresar contraseña"
+EMAIL_HOST_PASSWORD="Ingrear_contraseña"
