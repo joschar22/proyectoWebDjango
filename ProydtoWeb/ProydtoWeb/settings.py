@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+from django.contrib.messages import constants as mensajes_de_error
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -45,6 +47,9 @@ INSTALLED_APPS = [
     'contacto',
     'tienda',
     'carro',
+    'autenticacion',
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +145,13 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="Ingresar contraseña"
 EMAIL_HOST_PASSWORD="Ingrear_contraseña"
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
+
+MESSAGE_TAGS={
+    mensajes_de_error.DEBUG:'debug',
+    mensajes_de_error.INFO:'info',
+    mensajes_de_error.SUCCESS:'succes',
+    mensajes_de_error.WARNING:'warning',
+    mensajes_de_error.ERROR:'danger',
+}
