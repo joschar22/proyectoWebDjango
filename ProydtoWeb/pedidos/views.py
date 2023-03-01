@@ -24,16 +24,17 @@ def procesar_pedido(request):
             user=request.user,
             pedido=pedido
         ))
+    #insert into
     LineaPedido.objects.bulk_create(lineas_pedido)
 
     enviar_mail(
         pedido=pedido,
         lineas_pedido=lineas_pedido,
         nombreusuario=request.user.username,
-        emailususario=request.user.usermail
+        emailususario=request.user.email
     )
     messages.success(request,"El pedido se ha creado correctamente")
-    return redirect("../Home")
+    return redirect("../")
 
 def enviar_mail(**kwargs):
     asunto="Gracias por el pedido"
@@ -46,6 +47,7 @@ def enviar_mail(**kwargs):
 
     mensaje_texto=strip_tags(mensaje)
     from_email="chaqquererj@gmail.com"
-    to=kwargs.get("emailusuario")
+    #to=kwargs.get("emailususario")
+    to="joseChaqquereRea@outlook.com"
 
     sendEmail(asunto, mensaje_texto,from_email,[to],html_message=mensaje)

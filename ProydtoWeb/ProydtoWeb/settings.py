@@ -118,8 +118,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-#LANGUAGE_CODE = 'es-ue'
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'es-ue'
+#LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -145,8 +145,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
-EMAIL_HOST_USER="Ingresar contraseña"
-EMAIL_HOST_PASSWORD="Ingrear_contraseña"
+EMAIL_HOST_USER="chaqquererj@gmail.com"
+EMAIL_HOST_PASSWORD="xmugdnvlhkdkljww"
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
