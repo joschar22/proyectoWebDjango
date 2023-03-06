@@ -9,9 +9,12 @@
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
             <h2 class="section-heading mb-4">
               <span class="section-heading-lower">{{ post.titulo }}</span>
-              <span class="section-heading-upper">{{ post.contenido }}</span>
             </h2>
-            <div style="text-align: left; font-size: 0.8em;">autor: {{ post.autor }}</div>
+            <p><span class="section-heading-upper">{{ post.contenido }}</span></p>
+            <div style="text-align: left; font-size: 0.8em;">
+              <a href={{post.enlace}} target="_blank"> ver mas informacion</a>
+              autor: {{ post.autor }}
+            </div>
           </div>
         </div>
       </div>

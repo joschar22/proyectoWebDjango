@@ -49,7 +49,7 @@ p {
 }
 
 .section-heading {
-  text-transform: initial;
+  text-transform: uppercase;
 }
 
 .section-heading .section-heading-upper {
@@ -160,7 +160,7 @@ p {
 }
 
 .cta .cta-inner {
-  position: relative;
+  position: absolute;
   padding: 3rem;
   margin: 0.5rem;
   background:linear-gradient(30deg, crimson,sienna, royalblue, indianred, purple);
